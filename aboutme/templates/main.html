@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}메인 페이지{% endblock %}
+
+{% block body %}
+
+  <div id="div1" class="title">
+      <h1>Make you</h1>
+      <h4>표현에 서툴렀던 당신을 아름답게 보여줄 수 있는 방법-</h4>
+  </div>
+
+  <div id="div2" class="login">
+
+      <form>
+          id: <input type="text" name="id"><br/>
+          password: <input type="password" name="password">
+      </form>
+
+      <br/>
+      <span>
+          <a href="{% url 'join' %}" style="font-weight: bold; " class="btn btn-primary btn-sm">회원가입</a>
+      </span>
+      <span>
+        <a href="{% url 'join' %}" style="font-weight: bold; " class="btn btn-primary btn-sm">로그인</a>
+      </span>
+
+
+  </div>
+
+
+
+{% endblock %}

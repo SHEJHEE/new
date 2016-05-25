@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}템플릿 선택{% endblock %}
+
+{% block body %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="row">
+    {% for template in templates %}
+
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="http://localhost:8000{{ template.image.url }}" alt="...">
+                    <div id="template_radio">
+                        <input type="radio" value="{{ template.id }}" name="radio_num">
+                    </div>
+                </a>
+            </div>
+
+    {% endfor %}
+    </div>
+    <input type="submit" value="저장">
+</form>
+
+{% endblock %}

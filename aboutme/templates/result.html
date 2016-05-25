@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}결과 페이지{% endblock %}
+
+{% block body %}
+
+  <div id="div1" class="result">
+<div>{{ page.summary }}</div>
+<div>{{ page.work_exp }}</div>
+<div>{{ page.template_image_id }}</div>
+      </div>
+
+    <a href="{% url 'edit' %}" style="font-weight: bold; " class="btn btn-primary btn-sm">수정하기</a>
+{% endblock %}

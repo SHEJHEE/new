@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}회원가입{% endblock %}
+
+{% block body %}
+
+
+  <div id="div1" class="join title">
+      <h2>회원가입</h2>
+      <h3>양식에 맞게 작성해주세요</h3>
+      </div>
+
+  <div id="div2" class="join">
+
+      <form action="" method="post">
+          ID: <input type="text" name="id"><button>중복검사</button><br/>
+          PASSWORD: <input type="password" name="password"><br/>
+          First name: <input type="text" name="firstname"><br/>
+          Last name: <input type="text" name="lastname"><br/>
+      </form>
+
+      <br/>
+      <span>
+          <a href="{% url 'edit' %}" style="font-weight: bold; " class="btn btn-primary btn-sm">가입완료</a>
+      </span>
+      <span>
+          <a href="{% url 'main' %}" style="font-weight: bold; " class="btn btn-primary btn-sm">홈으로</a>
+      </span>
+      </div>
+
+{% endblock %}

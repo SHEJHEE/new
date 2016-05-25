@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}자기소개 입력창{% endblock %}
+
+{% block body %}
+
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="저장">
+    </form>
+
+{% endblock %}
